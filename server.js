@@ -38,4 +38,4 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 
 app.post('/imageUrl', (req, res) => { image.handleClarifaiApiCall(req, res) })
 
-app.listen(3001, () => console.log("App is running at port 3001"));
+app.listen(process.env.PORT || 3001, () => console.log(`App is running at port ${process.env.PORT}`));
